@@ -14,6 +14,7 @@ export default gql`
     email: String!
     username: String!
     registrationCompleted: Boolean
+    avatar: String
   }
 
   type UsernameAvailability {

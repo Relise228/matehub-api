@@ -4,7 +4,7 @@ export namespace UserModule {
   interface DefinedFields {
     Query: 'getUser';
     Mutation: 'checkUsernameIsAvailable';
-    User: 'id' | 'email' | 'username' | 'registrationCompleted';
+    User: 'id' | 'email' | 'username' | 'registrationCompleted' | 'avatar';
     UsernameAvailability: 'isAvailable';
   };
   
@@ -43,6 +43,7 @@ export namespace UserModule {
       email?: gm.Middleware[];
       username?: gm.Middleware[];
       registrationCompleted?: gm.Middleware[];
+      avatar?: gm.Middleware[];
     };
     UsernameAvailability?: {
       '*'?: gm.Middleware[];

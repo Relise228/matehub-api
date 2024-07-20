@@ -3,6 +3,7 @@ import mongoose, { Types } from "mongoose"
 const Schema = mongoose.Schema
 
 interface IUser {
+  avatar: string
   username: string
   password: string
   role: Types.ObjectId
@@ -13,6 +14,7 @@ interface IUser {
 }
 
 const userSchema = new Schema<IUser>({
+  avatar: String,
   username: {
     type: String,
     required: true,

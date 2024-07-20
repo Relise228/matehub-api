@@ -61,6 +61,7 @@ export type TokenData = {
 
 export type User = {
   __typename?: 'User';
+  avatar?: Maybe<Scalars['String']['output']>;
   email: Scalars['String']['output'];
   id: Scalars['ID']['output'];
   registrationCompleted?: Maybe<Scalars['Boolean']['output']>;
@@ -244,6 +245,7 @@ export type TokenDataResolvers<ContextType = any, ParentType extends ResolversPa
 };
 
 export type UserResolvers<ContextType = any, ParentType extends ResolversParentTypes['User'] = ResolversParentTypes['User']> = {
+  avatar?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
   email?: Resolver<ResolversTypes['String'], ParentType, ContextType>;
   id?: Resolver<ResolversTypes['ID'], ParentType, ContextType>;
   registrationCompleted?: Resolver<Maybe<ResolversTypes['Boolean']>, ParentType, ContextType>;
